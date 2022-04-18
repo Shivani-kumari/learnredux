@@ -11,10 +11,15 @@ function App() {
   const dec = ()=>{
     dispatch({type:'DEC'})
   }
+  const addBy = ()=>{
+    // action is object with type and playlode property
+    dispatch({type:'ADD',payload:10})
+  }
   return (
     <div className="App">
       <button onClick={inc}>Increment</button>
       <button onClick={dec}> Decrement</button>
+      <button onClick={addBy}>AddBy</button>
       {counter}
     </div>
   );
